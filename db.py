@@ -95,6 +95,8 @@ def get_conn():
     from dotenv import load_dotenv
     import sqlitecloud
 
+    load_dotenv()
+
     sqlite_conn_str = os.environ.get("SQLITECLOUD_CONN_STR")
     conn = sqlitecloud.connect(sqlite_conn_str)
 
